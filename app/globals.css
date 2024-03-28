@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+.custom-underline {
+  position: relative;
+}
+.clipped{
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: red; /* Boja underlina */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.underline-selected::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: red; 
+  width: 100%;
+}
+
+.custom-underline:hover::after {
+  width: 100%;
+  left: 0;
+}

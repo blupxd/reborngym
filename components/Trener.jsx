@@ -11,49 +11,48 @@ import {
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+
+const services = [
+  { icon: faLaptop, text: "Online konsultacije" },
+  { icon: faUtensils, text: "Personalizovan plan ishrane" },
+  { icon: faRunning, text: "Transformacija tela" },
+  { icon: faHandFist, text: "Trening boksa/kikboksa" },
+];
+
 const Trener = () => {
   return (
     <div className="bg-black relative overflow-hidden flex flex-col">
-      <div className="grid grid-cols-2 z-50 py-12 px-12">
-        <div className=" relative">
-          <div className="h-[35rem] mr-24 mb-24 border-[2px] border-red-700 overflow-hidden relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 z-50 py-12 md:py-24 px-12 md:px-24">
+        {/* Slika i Shape */}
+        <div className="relative order-2 md:order-1">
+          <div className="h-[25rem] md:h-[40rem] mr-0 md:mr-24 mb-12 md:mb-24 md:border-[2px] border-red-700 overflow-hidden relative">
             <Image
               src={slika}
               alt="slika"
               layout="fill"
               objectFit="cover"
-              className="saturate-0 hover:saturate-100 transition-all duration-500"
+              className="saturate-0 hover:saturate-100 transition-all md:mt-0 mt-12 duration-500"
               style={{ zIndex: 1 }}
             />
           </div>
-          <div className="absolute bottom-[-3rem] right-0 z-0">
+          <div className="absolute bottom-[-3rem] md:bottom-[-6rem] right-0 z-0">
             <Image src={shape} alt="shape" width={450} height={150} />
           </div>
         </div>
-        <div className="flex flex-col">
+        {/* Tekst */}
+        <div className="flex flex-col order-1 md:order-2">
           <hr className="border-[6px] border-red-700 w-32" />
           <br />
-          <h1 className="text-white font-bold text-6xl">PERSONALNI TRENINZI</h1>
-          <div className="grid grid-cols-2 text-lg gap-2 my-12">
-            <div className="px-4 py-2 text-white bg-red-700 clipped">
-              <FontAwesomeIcon icon={faLaptop} />{" "}
-              <span className="italic">Online konsultacije</span>
-            </div>
-            <div className="px-4 py-2 text-white bg-red-700 clipped">
-              <FontAwesomeIcon icon={faUtensils} />{" "}
-              <span className="italic">Personalizovan plan ishrane</span>
-            </div>
-            <div className="px-4 py-2 text-white bg-red-700 clipped">
-              <FontAwesomeIcon icon={faRunning} />{" "}
-              <span className="italic">Transformacija tela</span>
-            </div>
-            <div className="px-4 py-2 text-white bg-red-700 clipped">
-              <FontAwesomeIcon icon={faHandFist} />{" "}
-              <span className="italic">Trening boksa/kikboksa</span>
-            </div>
+          <h1 className="text-white font-bold text-4xl md:text-6xl">PERSONALNI TRENINZI</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 text-xs md:text-base gap-2 my-8 md:my-12">
+            {services.map((service, index) => (
+              <div key={index} className="px-4 py-2 text-white bg-red-700 clipped">
+                <FontAwesomeIcon icon={service.icon} /> <span className="italic">{service.text}</span>
+              </div>
+            ))}
           </div>
 
-          <p className="text-white text-lg italic">
+          <p className="text-white text-sm md:text-lg italic">
             <FontAwesomeIcon icon={faAngleRight} className="text-red-600" />{" "}
             Nudimo personalne treninge prilagođene isključivo vama. Naši stručni
             treneri će vam pružiti nepodeljenu pažnju i podršku, prateći vaš

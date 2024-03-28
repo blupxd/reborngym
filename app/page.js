@@ -10,14 +10,14 @@ export default function Home() {
     <main className="flex flex-col w-full">
       <Hero />
       <div className="w-full bg-black py-24">
-        <div className="flex mx-12 items-center gap-4">
+        <div className="flex md:flex-row flex-col mx-0 md:mx-12 items-center gap-4">
           <Image
             src={fitpass}
             className="clipped border-b-[5px] w-96 border-red-700"
             alt="fitpass"
           />
-          <div className="flex flex-col p-2 gap-6">
-            <h1 className="text-white font-bold italic text-3xl">
+          <div className="flex flex-col p-6 md:p-2 gap-6">
+            <h1 className="text-white font-bold italic text-2xl md:text-3xl">
               Osetite slobodu izbora uz našu teretanu koja podržava FitPass
               aplikaciju!{" "}
             </h1>

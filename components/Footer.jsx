@@ -2,9 +2,6 @@ import {
   faAngleRight,
   faClock,
   faEnvelope,
-  faLocation,
-  faLocationDot,
-  faLocationPin,
   faMapLocation,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
@@ -36,18 +33,19 @@ const Footer = () => {
       link: "/o-nama",
     },
   ];
+  
   return (
-    <div className="border-t border-red-800/50 bg-black py-12 px-24">
-      <div className="grid grid-cols-3 gap-2">
-        <div className="flex flex-col text-center px-12">
-          <h1 className="font-extrabold mb-6 text-red-600 text-3xl">
+    <div className="border-t border-red-800/50 bg-black py-8 md:py-12 px-6 md:px-24 md:text-left">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4">
+        <div className="flex flex-col text-center md:text-left">
+          <h1 className="font-extrabold mb-4 text-red-600 text-3xl">
             REBORN GYM
           </h1>
-          <h1 className="text-sm text-white italic">
+          <p className="text-sm text-white italic mb-4">
             <FontAwesomeIcon icon={faAngleRight} /> Uđite kao što jeste, izađite
             kao pobednik.
-          </h1>
-          <div className="inline-flex text-lg items-center justify-center mt-4 gap-8">
+          </p>
+          <div className="inline-flex text-lg items-center justify-center md:justify-start gap-8">
             <Link
               href="https://www.instagram.com/reborngym_/"
               className="text-red-600 hover:text-red-800 text-sm transition-all duration-300"
@@ -63,8 +61,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-red-700 font-bold text-xl">Sadržaj sajta</h1>
-          <ul className="flex flex-col gap-2 mt-4 font-thin text-white">
+          <h1 className="text-red-700 font-bold text-xl md:text-left text-center">Sadržaj sajta</h1>
+          <ul className="flex flex-col  gap-2 mt-4 font-thin text-white">
             {navbarItems.map((item, key) => (
               <li key={key} className="flex gap-2 items-center">
                 <FontAwesomeIcon className="text-red-800" icon={faAngleRight} />
@@ -79,7 +77,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-red-700 font-bold text-xl">Informacije</h1>
+          <h1 className="text-red-700 font-bold text-xl md:text-left text-center">Informacije</h1>
           <ul className="text-white flex flex-col gap-4 mt-4 text-sm">
             <li className="flex items-center">
               <FontAwesomeIcon

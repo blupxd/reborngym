@@ -1,12 +1,11 @@
-"use client";
+"use client"
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Nav = () => {
-  const [selectedLink, setSelectedLink] = useState("/"); // Stanje za praćenje selektovanog linka
+  const [selectedLink, setSelectedLink] = useState("/");
 
   const navbarItems = [
     {
@@ -32,9 +31,9 @@ const Nav = () => {
   ];
 
   return (
-    <div className="bg-black border-b-[1px] border-red-700 px-12 py-4 inline-flex w-full items-center justify-between">
-      <h1 className="font-bold text-red-700 text-3xl">REBORN GYM</h1>
-      <ul className="inline-flex teko gap-16 font-semibold text-white">
+    <div style={{zIndex: 150}} className="bg-black border-b-[1px] border-red-700 px-12 py-4 hidden md:inline-flex w-full items-center justify-between fixed top-0">
+      <h1 className="font-bold text-red-700 text-3xl">REBORN GYM</h1> 
+      <ul className="inline-flex teko gap-6 lg:gap-16 font-semibold text-white">
         {navbarItems.map((item, key) => (
           <li key={key} className="relative">
             <Link

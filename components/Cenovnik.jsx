@@ -22,11 +22,11 @@ const Cenovnik = () => {
   ];
 
   return (
-    <div id="cenovnik" className="bg-black flex flex-col p-12">
-      <div className="grid grid-cols-2">
+    <div id="cenovnik" className="bg-black flex flex-col p-6 md:p-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="flex flex-col">
           <h1 className="text-red-700 text-2xl italic">CENOVNIK</h1>
-          <h1 className="text-white text-4xl font-bold">
+          <h1 className="text-white text-3xl md:text-4xl font-bold">
             NAJPOVOLJNIJE CENE ZA NAŠE VEŽBAČE
           </h1>
           <br />
@@ -35,26 +35,26 @@ const Cenovnik = () => {
             prilagođene svima. Vaš put ka boljem zdravlju nikada nije bio
             pristupačniji!
           </p>
-          <hr className="border-[2px] border-red-700 clipped w-16 mt-2" />
-          <div className="bg-red-700 mx-12 p-12 mt-12 clipped">
-            <h1 className="text-4xl text-white italic">
+          <hr className="border-[2px] border-red-700 w-16 mt-4" />
+          <div className="bg-red-700 clipped mx-0 md:mx-12 p-12 mb-12 md:mb-0 mt-12">
+            <h1 className="text-2xl md:text-4xl text-white italic">
               PORODIČNI POPUST <br />{" "}
-              <span className="font-bold border-b-[4px] border-black/60">
+              <span className="font-bold border-b-4 border-black/60">
                 300 RSD
               </span>
             </h1>
           </div>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {cenovnik.map(({ title, options }) => (
             <div
               key={title}
-              className="bg-gray-950/60 border-b-[5px] border-red-700  p-12 flex flex-col clipped"
+              className="bg-gray-950/60 h-96 border-b-[5px] clipped border-red-700 p-12 flex flex-col"
             >
               <h1 className="text-3xl font-bold text-white italic text-center">
                 {title}
               </h1>
-              <hr className="border-[2px] border-red-700 mx-auto clipped w-16 mb-6" />
+              <hr className="border-[2px] border-red-700 w-16 mx-auto mb-6" />
               <div className="flex flex-col gap-4">
                 {options.map(({ text }) => (
                   <h1
@@ -71,11 +71,6 @@ const Cenovnik = () => {
               </div>
             </div>
           ))}
-          <div className="flex flex-col col-span-2 mt-6 px-12 py-2 bg-red-700">
-            <h1 className="text-white text-4xl text-center font-bold italic">
-              DNEVNA 300 DIN
-            </h1>
-          </div>
         </div>
       </div>
     </div>

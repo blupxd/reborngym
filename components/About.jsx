@@ -65,7 +65,7 @@ const About = () => {
             ))}
           </div>
 
-          {/* <div className="mt-8">
+          <div className="mt-8">
             <h1 className="text-red-700 text-xl md:text-2xl">Radno vreme</h1>
             <ul className="text-gray-500">
               {workHours.map((item, index) => (
@@ -85,7 +85,7 @@ const About = () => {
                 <span>Kneza Mihajla 39-29, Smederevo 11300</span>
               </li>
             </ul>
-          </div> */}
+          </div>
         </div>
         <div className="h-80 md:h-full relative border-b-5 border-red-700 md:order-1">
           <Image

@@ -26,17 +26,17 @@ const Cenovnik = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="flex flex-col">
           <h1 className="text-red-700 text-2xl italic">CENOVNIK</h1>
-          <h1 className="text-white text-3xl md:text-4xl font-bold">
+          <h1 className="text-white text-4xl font-bold">
             NAJPOVOLJNIJE CENE ZA NAŠE VEŽBAČE
           </h1>
           <br />
-          <p className="text-base text-gray-500 italic">
+          <p className="text-xl text-gray-500 italic">
             Nudimo visokokvalitetne fitnes usluge po povoljnim cenama,
             prilagođene svima. Vaš put ka boljem zdravlju nikada nije bio
             pristupačniji!
           </p>
           <hr className="border-[2px] border-red-700 w-16 mt-4" />
-          <div className="bg-red-700 clipped mx-0 md:mx-12 p-12 mb-12 md:mb-0 mt-12">
+          <div className="bg-red-700 clipped mx-0 md:mx-12 p-6 md:p-12 mb-12 md:mb-0 mt-12">
             <h1 className="text-2xl md:text-4xl text-white italic">
               PORODIČNI POPUST <br />{" "}
               <span className="font-bold border-b-4 border-black/60">
@@ -51,7 +51,7 @@ const Cenovnik = () => {
               key={title}
               className="bg-gray-950/60 h-96 border-b-[5px] clipped border-red-700 p-12 flex flex-col"
             >
-              <h1 className="text-3xl font-bold text-white italic text-center">
+              <h1 className="text-5xl md:text-3xl font-bold text-white italic text-center">
                 {title}
               </h1>
               <hr className="border-[2px] border-red-700 w-16 mx-auto mb-6" />
@@ -59,7 +59,7 @@ const Cenovnik = () => {
                 {options.map(({ text }) => (
                   <h1
                     key={text}
-                    className="text-base flex items-center text-gray-400"
+                    className="text-xl md:text-base flex items-center text-gray-400"
                   >
                     <FontAwesomeIcon
                       className="text-red-700 mr-2"

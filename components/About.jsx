@@ -43,9 +43,9 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
         <div className="flex flex-col justify-center px-6 py-12 md:order-2">
           <h1 className="text-red-700 text-xl md:text-2xl">O NAMA</h1>
-          <hr className="border-[2px] border-white w-16 mb-6" />
-          <h1 className="text-white text-4xl font-bold mb-4">RebornGym</h1>
-          <p className="text-base md:text-lg text-gray-500 italic mb-4">
+          <hr className="border-[2px] border-red-600 w-16 mb-6 clipped" />
+          <h1 className="text-white text-5xl md:text-4xl font-bold mb-4">RebornGym</h1>
+          <p className="text-xl text-gray-500 italic mb-4">
             Nudimo visokokvalitetne fitnes usluge po povoljnim cenama,
             prilagođene svima. Vaš put ka boljem zdravlju nikada nije bio
             pristupačniji!
@@ -54,11 +54,11 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <div key={index} className="flex flex-col py-2">
-                <h1 className="text-red-700 font-semibold text-base md:text-xl">
+                <h1 className="text-red-700 font-semibold text-lg md:text-xl">
                   <FontAwesomeIcon icon={faCircleCheck} /> {service.title}
                 </h1>
-                <h1 className="text-gray-500 text-sm md:text-base italic">
-                  <FontAwesomeIcon icon={faAngleDoubleRight} />{" "}
+                <h1 className="text-white/50 text-base italic">
+                  <FontAwesomeIcon className='text-red-700' icon={faAngleDoubleRight} />{" "}
                   {service.description}
                 </h1>
               </div>

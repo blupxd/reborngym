@@ -37,29 +37,7 @@ const Footer = () => {
   return (
     <div className="border-t border-red-800/50 bg-black py-8 md:py-12 px-6 md:px-24 md:text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4">
-        <div className="flex flex-col text-center md:text-left">
-          <h1 className="font-extrabold mb-4 text-red-600 text-3xl">
-            REBORN GYM
-          </h1>
-          <p className="text-sm text-white italic mb-4">
-            <FontAwesomeIcon icon={faAngleRight} /> Uđite kao što jeste, izađite
-            kao pobednik.
-          </p>
-          <div className="inline-flex text-lg items-center justify-center md:justify-start gap-8">
-            <Link
-              href="https://www.instagram.com/reborngym_/"
-              className="text-red-600 hover:text-red-800 text-sm transition-all duration-300"
-            >
-              <FontAwesomeIcon icon={faInstagram} /> Instagram
-            </Link>
-            <Link
-              href="https://www.facebook.com/RebornGYM207"
-              className="text-red-600 hover:text-red-800 text-sm transition-all duration-300"
-            >
-              <FontAwesomeIcon icon={faFacebook} /> Facebook
-            </Link>
-          </div>
-        </div>
+        
         <div className="flex flex-col">
           <h1 className="text-red-700 font-bold text-xl md:text-left text-center">Sadržaj sajta</h1>
           <ul className="flex flex-col  gap-2 mt-4 font-thin text-white">
@@ -118,6 +96,29 @@ const Footer = () => {
               </span>
             </li>
           </ul>
+        </div>
+        <div className="flex flex-col text-center md:text-left">
+          <h1 className="font-extrabold mb-4 text-red-600 text-3xl">
+            REBORN GYM
+          </h1>
+          <p className="text-sm text-white italic mb-4">
+            <FontAwesomeIcon icon={faAngleRight} /> Uđite kao što jeste, izađite
+            kao pobednik.
+          </p>
+          <div className="inline-flex text-lg items-center justify-center md:justify-start gap-8">
+            <Link
+              href="https://www.instagram.com/reborngym_/"
+              className="text-red-600 hover:text-red-800 text-sm transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faInstagram} /> Instagram
+            </Link>
+            <Link
+              href="https://www.facebook.com/RebornGYM207"
+              className="text-red-600 hover:text-red-800 text-sm transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faFacebook} /> Facebook
+            </Link>
+          </div>
         </div>
       </div>
     </div>

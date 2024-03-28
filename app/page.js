@@ -17,11 +17,10 @@ export default function Home() {
             alt="fitpass"
           />
           <div className="flex flex-col p-6 md:p-2 gap-6">
-            <h1 className="text-white font-bold italic text-2xl md:text-3xl">
-              Osetite slobodu izbora uz našu teretanu koja podržava FitPass
-              aplikaciju!{" "}
+            <h1 className="text-white font-bold italic text-3xl md:text-3xl">
+              FitPass Partner{" "}
             </h1>
-            <p className="text-wrap text-gray-600 text-md">
+            <p className="text-wrap text-gray-500 md:text-base text-xl">
               Sa FitPass-om, imate pristup raznovrsnim treninzima i teretanama
               širom grada. Pružamo vam fleksibilnost i mogućnost da prilagodite
               svoj fitness plan vašim potrebama i rasporedu. Pridružite nam se

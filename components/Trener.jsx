@@ -43,8 +43,8 @@ const Trener = () => {
         <div className="flex flex-col order-1 md:order-2">
           <hr className="border-[6px] border-red-700 w-32" />
           <br />
-          <h1 className="text-white font-bold text-4xl md:text-6xl">PERSONALNI TRENINZI</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 text-xs md:text-base gap-2 my-8 md:my-12">
+          <h1 className="text-white font-bold text-5xl md:text-6xl">PERSONALNI TRENINZI</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-base gap-2 my-8 md:my-12">
             {services.map((service, index) => (
               <div key={index} className="px-4 py-2 text-white bg-red-700 clipped">
                 <FontAwesomeIcon icon={service.icon} /> <span className="italic">{service.text}</span>
@@ -52,7 +52,7 @@ const Trener = () => {
             ))}
           </div>
 
-          <p className="text-white text-sm md:text-lg italic">
+          <p className="text-white text-base md:text-left text-center md:text-lg italic">
             <FontAwesomeIcon icon={faAngleRight} className="text-red-600" />{" "}
             Nudimo personalne treninge prilagođene isključivo vama. Naši stručni
             treneri će vam pružiti nepodeljenu pažnju i podršku, prateći vaš
@@ -60,7 +60,7 @@ const Trener = () => {
             ishrane, zajedno ćemo stvoriti put ka vašem optimalnom fizičkom i
             mentalnom blagostanju.
           </p>
-          <div className="relative max-w-max">
+          <div className="relative md:mx-0 mx-auto max-w-max">
             <Link
               className="inline-block bg-black z-20 hover:bg-red-700 hover:text-white hover:font-semibold px-4 py-2 border border-red-700 text-red-700 text-xl max-w-max mt-4 relative group focus:outline-none transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 focus:-translate-y-1 focus:-translate-x-1"
               href="/treneri"

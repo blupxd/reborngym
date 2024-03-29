@@ -21,7 +21,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full relative mt-12 grid grid-cols-1 md:grid-cols-2 bg-black">
+    <div className="w-full relative grid grid-cols-1 md:grid-cols-2 bg-black">
       <div
         style={{ zIndex: 50 }}
         className="flex md:mt-0 mt-12 flex-col justify-center p-6 md:p-12"

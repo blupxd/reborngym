@@ -20,7 +20,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} ${sg.className}`}>
         <Nav />
         <MobileNav />
+        <div className="pt-16 bg-black max-h-full">
         {children}
+        </div>
+        
         <Footer />
       </body>
     </html>

@@ -1,0 +1,49 @@
+[
+    {
+      "name": "Aleksandar Milošević",
+      "titula": "Dvostruki šampion Srbije, vicešampion Balkan",
+      "services": [
+        "Personalni treninzi",
+        "Grupni treninzi",
+        "Online saradnja",
+        "Plan ishrane",
+        "Transformacija tela",
+        "Povećanje mišićne mase",
+        "Skidanje kilograma",
+        "Theragun perkusivna terapija"
+      ],
+      "instagram": "cile92_bbf",
+      "mobilni": "+381 65 5007 247",
+      "mail": "cilebbf@yahoo.com"
+    },
+    {
+        "name": "Marija Stanković",
+        "titula": "",
+        "services": [
+          "Personalni treninzi",
+          "Plan ishrane",
+          "Transformacija tela",
+          "Povećanje mišićne mase",
+          "Skidanje kilograma"
+        ],
+        "instagram": "stankovic.marija_vika",
+        "mobilni": "+381 63 281 912",
+        "mail": "marijastankovic@gmail.com"
+      },
+      {
+        "name": "Luka Đerić",
+        "titula": "",
+        "services": [
+          "Personalni treninzi",
+          "Transformacija tela",
+          "Kardio treninzi",
+          "Boks / Kik boks",
+          "Treninzi 1 na 1",
+          "Treninzi 2 na 1"
+        ],
+        "instagram": "djeraaa_",
+        "mobilni": "+381 64 123 456",
+        "mail": "lukadjeric9@yahoo.com"
+      }
+  ]
+  

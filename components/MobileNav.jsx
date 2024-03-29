@@ -39,7 +39,7 @@ const MobileNav = () => {
   return (
     <div style={{zIndex: 150}} className="bg-black md:hidden px-4 py-2 flex items-center justify-between fixed top-0 w-full">
       <h1 className="font-bold text-red-700 text-2xl">REBORN GYM</h1>
-      <button className="bg-red-700 p-2 w-12 h-12 clip" onClick={toggleMenu}>
+      <button className="bg-red-700 p-2 h-12 w-12 clip" onClick={toggleMenu}>
         {isOpen ? <FontAwesomeIcon className='text-white' icon={faClose} size="2x" /> : <Image src={icon} width={35} className="invert"/>}
       </button>
       {isOpen && (

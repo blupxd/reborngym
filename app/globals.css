@@ -14,7 +14,7 @@ html {
   position: relative;
 }
 .clipped {
-  clip-path: polygon(7% 0%, 100% 0%, 97% 100%, 0% 100%);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 .custom-underline::after {
   content: "";

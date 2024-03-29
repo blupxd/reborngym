@@ -3,7 +3,7 @@ import Image from "next/image";
 import CountUp from "react-countup";
 import slika from "../assets/images/slika1.jpg";
 import Link from "next/link";
-
+import logo from '../assets/images/logo.png'
 const Hero = () => {
   const heroInfo = [
     {
@@ -26,9 +26,7 @@ const Hero = () => {
         style={{ zIndex: 50 }}
         className="flex md:mt-0 mt-12 flex-col justify-center p-6 md:p-12"
       >
-        <h1 className="font-extrabold md:text-left text-center text-red-700 text-6xl mb-12">
-          REBORN GYM
-        </h1>
+        <Image src={logo} width={250} className="mb-12" alt="logo" />
         <div className="flex flex-col md:items-start items-center">
           <h1 className="text-5xl lg:text-6xl text-center md:text-left text-white font-extrabold">
             JAČI. BRŽI. BOLJI. BEZ IZGOVORA.

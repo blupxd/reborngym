@@ -59,7 +59,7 @@ const Slike = () => {
         ))}
       </div>
       {enlargedIndex !== null && (
-        <div className="fixed top-12 w-full h-full left-0 z-50 p-2 md:p-24 bg-black/80 flex md:flex-row flex-col justify-center items-center">
+        <div style={{zIndex: 140}} className="fixed top-12 w-full h-full left-0 p-2 md:p-24 bg-black/80 flex md:flex-row flex-col justify-center items-center">
             <button
               className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 hidden md:flex items-center justify-center hover:text-black hover:bg-red-700"
               onClick={() => navigate("prev")}

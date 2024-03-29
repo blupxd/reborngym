@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
+import Image from 'next/image'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-
+import logo from '../assets/images/logo.png'
 const Nav = () => {
   const [selectedLink, setSelectedLink] = useState("/");
 
@@ -32,7 +33,7 @@ const Nav = () => {
 
   return (
     <div style={{zIndex: 150}} className="bg-black px-12 py-4 hidden md:inline-flex w-full items-center justify-between fixed top-0">
-      <h1 className="font-bold text-red-700 text-3xl">REBORN GYM</h1> 
+      <Image src={logo} width={75} alt="logo"/>
       <ul className="inline-flex teko gap-6 lg:gap-16 font-semibold text-white">
         {navbarItems.map((item, key) => (
           <li key={key} className="relative">

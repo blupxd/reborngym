@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleRight, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 import icon from '../assets/icons/navbar.svg'
-
+import logo from '../assets/images/logo.png'
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false); // Stanje za praćenje otvorenog/zatvorenog menija
 
@@ -38,7 +38,7 @@ const MobileNav = () => {
 
   return (
     <div style={{zIndex: 150}} className="bg-black md:hidden px-4 py-2 flex items-center justify-between fixed top-0 w-full">
-      <h1 className="font-bold text-red-700 text-2xl">REBORN GYM</h1>
+      <Image src={logo} width={75} alt="logo"/>
       <button className="bg-red-700 p-2 h-12 w-12 clip" onClick={toggleMenu}>
         {isOpen ? <FontAwesomeIcon className='text-white' icon={faClose} size="2x" /> : <Image src={icon} width={35} className="invert"/>}
       </button>

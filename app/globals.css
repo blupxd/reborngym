@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
+}
+
+.clip {
+  clip-path: polygon(100% 0%, 100% 75%, 75% 100%, 0 100%, 0 0);
 }
 
 .custom-underline {
   position: relative;
 }
-.clipped{
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+.clipped {
+  clip-path: polygon(7% 0%, 100% 0%, 97% 100%, 0% 100%);
 }
 .custom-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -5px;
@@ -23,14 +27,14 @@ html{
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.underline-selected::after{
-  content: '';
+.underline-selected::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: red; 
+  background-color: red;
   width: 100%;
 }
 

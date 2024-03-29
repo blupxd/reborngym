@@ -3,6 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleRight, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import Image from 'next/image'
+import icon from '../assets/icons/navbar.svg'
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false); // Stanje za praćenje otvorenog/zatvorenog menija
@@ -35,13 +37,13 @@ const MobileNav = () => {
   ];
 
   return (
-    <div style={{zIndex: 150}} className="bg-black md:hidden border-b-[1px] border-red-700 px-4 py-2 flex items-center justify-between fixed top-0 w-full">
+    <div style={{zIndex: 150}} className="bg-black md:hidden px-4 py-2 flex items-center justify-between fixed top-0 w-full">
       <h1 className="font-bold text-red-700 text-2xl">REBORN GYM</h1>
-      <button className="text-red-700" onClick={toggleMenu}>
-        {isOpen ? <FontAwesomeIcon icon={faClose} size="2x" /> : <FontAwesomeIcon icon={faBars} size="2x" />}
+      <button className="bg-red-700 p-2 w-12 h-12 clip" onClick={toggleMenu}>
+        {isOpen ? <FontAwesomeIcon className='text-white' icon={faClose} size="2x" /> : <Image src={icon} width={35} className="invert"/>}
       </button>
       {isOpen && (
-        <ul className="absolute top-12 flex flex-col h-screen gap-12 left-0 w-full bg-black text-xl text-white mt-1 p-12">
+        <ul className="absolute top-12 flex flex-col h-screen gap-12 left-0 w-full bg-black text-xl text-white mt-2 p-12">
           {navbarItems.map((item, key) => (
             <li key={key} className="relative py-2 px-4 hover:text-red-600 transition-all duration-300 flex gap-2 items-center">
                 <FontAwesomeIcon icon={faAngleDoubleRight} />

@@ -31,7 +31,7 @@ const Nav = () => {
   ];
 
   return (
-    <div style={{zIndex: 150}} className="bg-black border-b-[1px] border-red-700 px-12 py-4 hidden md:inline-flex w-full items-center justify-between fixed top-0">
+    <div style={{zIndex: 150}} className="bg-black px-12 py-4 hidden md:inline-flex w-full items-center justify-between fixed top-0">
       <h1 className="font-bold text-red-700 text-3xl">REBORN GYM</h1> 
       <ul className="inline-flex teko gap-6 lg:gap-16 font-semibold text-white">
         {navbarItems.map((item, key) => (

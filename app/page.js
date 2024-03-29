@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex md:flex-row flex-col mx-0 md:mx-12 items-center gap-4">
           <Image
             src={fitpass}
-            className="clipped border-b-[5px] w-96 border-red-700"
+            className="clip border-r-[5px] w-96 border-red-700"
             alt="fitpass"
           />
           <div className="flex flex-col p-6 md:p-2 gap-6">

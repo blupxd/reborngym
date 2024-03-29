@@ -22,7 +22,7 @@ const services = [
 const Trener = () => {
   return (
     <div className="bg-black relative overflow-hidden flex flex-col">
-      <div className="grid grid-cols-1 md:grid-cols-2 z-50 py-12 md:py-24 px-12 md:px-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 z-50 py-12 md:py-24 px-12 lg:px-24">
         {/* Slika i Shape */}
         <div className="relative order-2 md:order-1">
           <div className="h-[25rem] md:h-[40rem] mr-0 md:mr-24 mb-12 md:mb-24 md:border-[2px] border-red-700 overflow-hidden relative">
@@ -44,9 +44,9 @@ const Trener = () => {
           <hr className="border-[6px] border-red-700 w-32" />
           <br />
           <h1 className="text-white font-bold text-5xl md:text-6xl">PERSONALNI TRENINZI</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 text-base md:text-base gap-2 my-8 md:my-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 text-base md:text-sm gap-2 my-8 md:my-12">
             {services.map((service, index) => (
-              <div key={index} className="px-4 py-2 text-white bg-red-700 clipped">
+              <div key={index} className="px-8 py-2 text-white bg-red-700 clipped">
                 <FontAwesomeIcon icon={service.icon} /> <span className="italic">{service.text}</span>
               </div>
             ))}

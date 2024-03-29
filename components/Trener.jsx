@@ -46,7 +46,7 @@ const Trener = () => {
           <h1 className="text-white font-bold text-5xl md:text-6xl">PERSONALNI TRENINZI</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 text-base md:text-sm gap-2 my-8 md:my-12">
             {services.map((service, index) => (
-              <div key={index} className="px-8 py-2 text-white bg-red-700 clipped">
+              <div key={index} className="px-4 py-2 text-white bg-red-700 clipped">
                 <FontAwesomeIcon icon={service.icon} /> <span className="italic">{service.text}</span>
               </div>
             ))}

@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       naziv: "Cenovnik",
-      link: "/cenovnik",
+      link: "/#cenovnik",
     },
     {
       naziv: "Treneri",
@@ -30,7 +30,7 @@ const Footer = () => {
     },
     {
       naziv: "O nama",
-      link: "/o-nama",
+      link: "/#o-nama",
     },
   ];
   

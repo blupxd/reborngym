@@ -82,7 +82,7 @@ const Slike = () => {
             >
               <FontAwesomeIcon icon={faAngleDoubleRight} />
             </button>
-          <div className="flex gap-12 mt-6">
+          <div className="flex md:hidden gap-12 mt-6">
             <button
               className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-32 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
               onClick={() => navigate("prev")}

@@ -49,7 +49,7 @@ const Cenovnik = () => {
           {cenovnik.map(({ title, options }) => (
             <div
               key={title}
-              className="bg-gray-900/60 h-96 border-b-[5px] clipped border-red-700 p-12 flex flex-col"
+              className="bg-gray-900/60 h-full border-b-[5px] clipped border-red-700 p-12 flex flex-col"
             >
               <h1 className="text-5xl md:text-3xl font-bold text-white italic text-center">
                 {title}

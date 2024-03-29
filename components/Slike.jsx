@@ -59,14 +59,15 @@ const Slike = () => {
         ))}
       </div>
       {enlargedIndex !== null && (
-        <div className="fixed top-12 w-full h-full left-0 z-50 p-2 md:p-24 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-          <button
-            className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
-            onClick={() => navigate("prev")}
-          >
-            <FontAwesomeIcon icon={faAngleDoubleLeft} />
-          </button>
-          <div className="relative w-full md:w-96 h-full">
+        <div className="fixed top-12 w-full h-full left-0 z-50 p-2 md:p-24 bg-black/50 flex md:flex-row flex-col justify-center items-center">
+            <button
+              className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 hidden md:flex items-center justify-center hover:text-black hover:bg-red-700"
+              onClick={() => navigate("prev")}
+            >
+              <FontAwesomeIcon icon={faAngleDoubleLeft} />
+            </button>
+            
+          <div className="relative w-full md:w-96 h-[35rem]">
             <Image
               src={imageList[enlargedIndex]}
               alt={`slika-${enlargedIndex}`}
@@ -76,13 +77,28 @@ const Slike = () => {
             />
           </div>
           <button
-            className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
-            onClick={() => navigate("next")}
-          >
-            <FontAwesomeIcon icon={faAngleDoubleRight} />
-          </button>
+              className="text-red-700 text-3xl border-red-700 hidden md:flex border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
+              onClick={() => navigate("next")}
+            >
+              <FontAwesomeIcon icon={faAngleDoubleRight} />
+            </button>
+          <div className="flex gap-12 mt-6">
+            <button
+              className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-32 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
+              onClick={() => navigate("prev")}
+            >
+              <FontAwesomeIcon icon={faAngleDoubleLeft} />
+            </button>
+            <button
+              className="text-red-700 text-3xl border-red-700 border p-2 sm:p-4 w-32 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
+              onClick={() => navigate("next")}
+            >
+              <FontAwesomeIcon icon={faAngleDoubleRight} />
+            </button>
+          </div>
+
           <button
-            className="text-white absolute top-4 sm:top-12 right-4 sm:right-12 text-3xl sm:text-4xl"
+            className="text-white absolute top-12 md:top-12 right-6 md:right-12 text-3xl sm:text-4xl"
             onClick={closeEnlarged}
           >
             <FontAwesomeIcon icon={faClose} />

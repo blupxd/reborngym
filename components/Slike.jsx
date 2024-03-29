@@ -67,7 +67,7 @@ const Slike = () => {
               <FontAwesomeIcon icon={faAngleDoubleLeft} />
             </button>
             
-          <div className="relative w-full md:w-96 h-[35rem]">
+          <div className="relative w-full md:w-96 h-[30rem]">
             <Image
               src={imageList[enlargedIndex]}
               alt={`slika-${enlargedIndex}`}

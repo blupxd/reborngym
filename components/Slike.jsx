@@ -77,7 +77,7 @@ const Slike = () => {
             />
           </div>
           <button
-              className="text-red-700 text-3xl border-red-700 hidden md:flex border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 flex items-center justify-center hover:text-black hover:bg-red-700"
+              className="text-red-700 text-3xl border-red-700 hidden md:flex border p-2 sm:p-4 w-10 sm:w-14 h-10 sm:h-14 items-center justify-center hover:text-black hover:bg-red-700"
               onClick={() => navigate("next")}
             >
               <FontAwesomeIcon icon={faAngleDoubleRight} />

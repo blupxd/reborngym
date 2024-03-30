@@ -49,7 +49,7 @@ const TrainerCard = ({
           {name}
           <br />
           {titula && (
-            <span className="text-sm font-bold text-yellow-200">
+            <span className="text-sm font-bold text-amber-500">
               <FontAwesomeIcon icon={faTrophy} /> {titula}
             </span>
           )}

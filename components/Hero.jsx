@@ -41,7 +41,7 @@ const Hero = () => {
         <div className="h-full flex md:flex-row flex-col gap-6 items-center">
           <div className="relative max-w-max mt-2 md:mt-0 ">
             <Link
-              className="inline-block max-w-max bg-black z-20 hover:bg-red-700 hover:text-white hover:font-semibold px-4 py-2 border border-red-700 text-red-700 text-base lg:text-xl max-w-max mt-4 relative transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 focus:-translate-y-1 focus:-translate-x-1"
+              className="inline-block bg-black z-20 hover:bg-red-700 hover:text-white hover:font-semibold px-4 py-2 border border-red-700 text-red-700 text-base lg:text-xl max-w-max mt-4 relative transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 focus:-translate-y-1 focus:-translate-x-1"
               href="/#cenovnik"
             >
               Učlani se!

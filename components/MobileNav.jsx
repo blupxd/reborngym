@@ -56,6 +56,10 @@ const MobileNav = () => {
         )}
       </button>
       <div
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            setIsOpen(false)
+          }}}
         className={`w-screen left-0 h-screen absolute top-14 ${
           isOpen ? "bg-black/50 backdrop-blur-sm" : " "
         } transition-all duration-300`}
@@ -85,20 +89,20 @@ const MobileNav = () => {
             </li>
           ))}
           <li className="flex flex-col italic items-center font-thin text-lg gap-4">
-
-              <Link
-                href="https://www.instagram.com/reborngym_/"
-                className="text-red-600 hover:text-red-800 transition-all duration-300"
-              >
-                <FontAwesomeIcon icon={faInstagram} /> <span className="text-white">Instagram</span>
-              </Link>
-              <Link
-                href="https://www.facebook.com/RebornGYM207"
-                className="text-red-600 hover:text-red-800 transition-all duration-300"
-              >
-                <FontAwesomeIcon icon={faFacebook} /> <span className="text-white">Facebook</span>
-              </Link>
-       
+            <Link
+              href="https://www.instagram.com/reborngym_/"
+              className="text-red-600 hover:text-red-800 transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faInstagram} />{" "}
+              <span className="text-white">Instagram</span>
+            </Link>
+            <Link
+              href="https://www.facebook.com/RebornGYM207"
+              className="text-red-600 hover:text-red-800 transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faFacebook} />{" "}
+              <span className="text-white">Facebook</span>
+            </Link>
           </li>
         </ul>
       </div>

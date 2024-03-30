@@ -88,7 +88,7 @@ const MobileNav = () => {
               <FontAwesomeIcon icon={faAngleDoubleLeft} />
             </li>
           ))}
-          <li className="flex flex-col italic items-center font-thin text-lg gap-4">
+          <li className="flex flex-col italic items-end font-thin text-lg gap-4">
             <Link
               href="https://www.instagram.com/reborngym_/"
               className="text-red-600 hover:text-red-800 transition-all duration-300"

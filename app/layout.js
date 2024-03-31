@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
-
+import opengraph from '../assets/images/opengraph.png'
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "@/components/Footer";
@@ -15,9 +15,11 @@ export const metadata = {
   description: "Reborn Gym je vaša destinacija za fitness i trening u srcu grada. Ponosimo se pružanjem vrhunskih usluga i programa treninga za sve nivoe fitnessa.",
   keywords: "fitness, trening, teretana, zdravlje, vežbanje, reborngym, trener",
   author: "Reborn Gym",
-  og: {
+  openGraph: {
     title: "Reborn Gym | Better, Faster, Stronger",
     description: "Reborn Gym je vaša destinacija za fitness i trening u srcu grada. Ponosimo se pružanjem vrhunskih usluga i programa treninga za sve nivoe fitnessa.",
+    image: opengraph,
+    siteName: "Reborn Gym | Better, Faster, Stronger"
   }
 };
 

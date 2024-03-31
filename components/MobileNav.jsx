@@ -4,21 +4,20 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDoubleLeft,
-  faAngleDoubleRight,
-  faBars,
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import icon from "../assets/icons/navbar.svg";
 import logo from "../assets/images/logo.png";
+import { usePathname } from 'next/navigation'
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 const MobileNav = () => {
+  const path = usePathname()
   const [isOpen, setIsOpen] = useState(false); // Stanje za praćenje otvorenog/zatvorenog menija
-  const [selectedLink, setSelectedLink] = useState("/");
+  const [selectedLink, setSelectedLink] = useState(path);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   const navbarItems = [
     {
       naziv: "Home",
@@ -52,7 +51,7 @@ const MobileNav = () => {
         {isOpen ? (
           <FontAwesomeIcon className="text-white" icon={faClose} size="2x" />
         ) : (
-          <Image src={icon} width={35} className="invert" />
+          <Image src={icon} width={35} className="invert" alt="menu"/>
         )}
       </button>
       <div
@@ -61,8 +60,9 @@ const MobileNav = () => {
             setIsOpen(false)
           }}}
         className={`w-screen left-0 h-screen absolute top-14 ${
-          isOpen ? "bg-black/50 backdrop-blur-sm" : " "
+          isOpen ? "bg-black/50 backdrop-blur-sm" : ""
         } transition-all duration-300`}
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <ul
           className={`transform absolute right-0  ${
@@ -88,7 +88,7 @@ const MobileNav = () => {
               <FontAwesomeIcon icon={faAngleDoubleLeft} />
             </li>
           ))}
-          <li className="flex flex-col italic items-end font-thin text-lg gap-4">
+          <li className="flex flex-col items-end font-thin text-lg gap-4">
             <Link
               href="https://www.instagram.com/reborngym_/"
               className="text-red-600 hover:text-red-800 transition-all duration-300"

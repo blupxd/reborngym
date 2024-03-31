@@ -1,7 +1,7 @@
-"use client";
-import React, { useState, useEffect } from "react";
+"use client"
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleUp, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +34,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-red-700 text-white rounded-full w-16 h-16 p-2 text-3xl opacity-90 backdrop-blur-sm focus:outline-none"
+          className="bg-red-700 text-white rounded-full w-16 h-16 p-2 text-3xl opacity-90 backdrop-blur-sm"
         >
           <FontAwesomeIcon icon={faAngleDoubleUp} />
         </button>

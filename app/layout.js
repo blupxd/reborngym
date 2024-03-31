@@ -19,13 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${sg.className}`}>
-        <ScrollToTop />
+        
         <Nav />
         <MobileNav />
         <div className="pt-16 bg-black max-h-full">
-        {children}
+        <ScrollToTop />
+          {children}
         </div>
-        
         <Footer />
       </body>
     </html>

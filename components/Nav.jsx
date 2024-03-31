@@ -5,8 +5,10 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import logo from '../assets/images/logo.png'
+import { usePathname } from "next/navigation";
 const Nav = () => {
-  const [selectedLink, setSelectedLink] = useState("/");
+  const path = usePathname()
+  const [selectedLink, setSelectedLink] = useState(path);
 
   const navbarItems = [
     {

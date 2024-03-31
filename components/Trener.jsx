@@ -11,6 +11,8 @@ import {
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import ScrollRevealAnimation from "./ScrollReveal";
+import ScrollOpacity from "./ScrollOpacity";
 
 const services = [
   { icon: faLaptop, text: "Online konsultacije" },
@@ -23,43 +25,58 @@ const Trener = () => {
   return (
     <div className="bg-black relative overflow-hidden flex flex-col">
       <div className="grid grid-cols-1 md:grid-cols-2 z-50 py-12 md:py-24 px-12 lg:px-24">
-        {/* Slika i Shape */}
-        <div className="relative order-2 md:order-1">
-          <div className="h-[25rem] md:h-[40rem] mr-0 md:mr-24 mb-12 md:mb-24 md:border-[2px] border-red-700 overflow-hidden relative">
-            <Image
-              src={slika}
-              alt="slika"
-              layout="fill"
-              objectFit="cover"
-              className="saturate-0 hover:saturate-100 transition-all md:mt-0 mt-12 duration-500"
-              style={{ zIndex: 1 }}
-            />
+        <ScrollOpacity direction={"left"}>
+          <div className="relative order-2 md:order-1">
+            <div className="h-[25rem] md:h-[40rem] mr-0 md:mr-24 mb-12 md:mb-24 md:border-[2px] border-red-700 overflow-hidden relative">
+              <Image
+                src={slika}
+                alt="slika"
+                fill
+                className="saturate-0 object-cover hover:saturate-100 transition-all md:mt-0 mt-12 duration-500"
+                style={{ zIndex: 1 }}
+              />
+            </div>
+
+            <div className="absolute bottom-[-3rem] md:bottom-[-6rem] right-0 z-0">
+              <Image src={shape} alt="shape" width={450} height={150} />
+            </div>
           </div>
-          <div className="absolute bottom-[-3rem] md:bottom-[-6rem] right-0 z-0">
-            <Image src={shape} alt="shape" width={450} height={150} />
-          </div>
-        </div>
+        </ScrollOpacity>
+
         {/* Tekst */}
         <div className="flex flex-col order-1 md:order-2">
-          <hr className="border-[6px] border-red-700 w-32" />
+          <ScrollOpacity direction={"left"}>
+            {" "}
+            <hr className="border-[6px] border-red-700 w-32" />
+          </ScrollOpacity>
           <br />
-          <h1 className="text-white font-bold text-5xl md:text-6xl">PERSONALNI TRENINZI</h1>
+          <ScrollRevealAnimation delay={0.4}>
+            <h1 className="text-white font-bold text-5xl md:text-6xl">
+              PERSONALNI TRENINZI
+            </h1>
+          </ScrollRevealAnimation>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 text-base md:text-sm gap-2 my-8 md:my-12">
             {services.map((service, index) => (
-              <div key={index} className="px-4 py-2 text-white bg-red-700 clipped">
-                <FontAwesomeIcon icon={service.icon} /> <span className="italic">{service.text}</span>
-              </div>
+              <ScrollOpacity delay={index * 0.5} key={index} direction={"left"}>
+                <div className="px-4 py-2 text-white bg-red-700 clipped">
+                  <FontAwesomeIcon icon={service.icon} />{" "}
+                  <span className="italic">{service.text}</span>
+                </div>
+              </ScrollOpacity>
             ))}
           </div>
-
-          <p className="text-white text-base md:text-left text-center md:text-lg italic">
-            <FontAwesomeIcon icon={faAngleRight} className="text-red-600" />{" "}
-            Nudimo personalne treninge prilagođene isključivo vama. Naši stručni
-            treneri će vam pružiti nepodeljenu pažnju i podršku, prateći vaš
-            napredak korak po korak. Sa personalizovanim programom vežbanja i
-            ishrane, zajedno ćemo stvoriti put ka vašem optimalnom fizičkom i
-            mentalnom blagostanju.
-          </p>
+          <ScrollRevealAnimation delay={0.3}>
+            <p className="text-white text-base md:text-left text-center md:text-lg italic">
+              <FontAwesomeIcon icon={faAngleRight} className="text-red-600" />{" "}
+              Nudimo personalne treninge prilagođene isključivo vama. Naši
+              stručni treneri će vam pružiti nepodeljenu pažnju i podršku,
+              prateći vaš napredak korak po korak. Sa personalizovanim programom
+              vežbanja i ishrane, zajedno ćemo stvoriti put ka vašem optimalnom
+              fizičkom i mentalnom blagostanju.
+            </p>
+          </ScrollRevealAnimation>
+          <ScrollRevealAnimation delay={0.5}>
           <div className="relative md:mx-0 mx-auto max-w-max">
             <Link
               className="inline-block bg-black z-20 hover:bg-red-700 hover:text-white hover:font-semibold px-4 py-2 border border-red-700 text-red-700 text-xl max-w-max mt-4 relative group focus:outline-none transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 focus:-translate-y-1 focus:-translate-x-1"
@@ -69,13 +86,14 @@ const Trener = () => {
             </Link>
             <span className="absolute w-full inset-x-0 bottom-0 h-10 border border-red-700"></span>
           </div>
+          </ScrollRevealAnimation>
         </div>
       </div>
       <Image
         src={bg}
         alt="bg"
-        objectFit="cover"
-        className="absolute opacity-[10%]"
+        fill
+        className="absolute object-cover opacity-[10%]"
       />
     </div>
   );

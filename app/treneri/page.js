@@ -2,6 +2,8 @@ import Personalni from "@/components/Personalni";
 import React from "react";
 import Image from "next/image";
 import image from "../../assets/images/bg2.jpg";
+import ScrollOpacity from "@/components/ScrollOpacity";
+import ScrollRevealAnimation from "@/components/ScrollReveal";
 
 const Treneri = () => {
   return (
@@ -11,16 +13,22 @@ const Treneri = () => {
           <Image
             src={image}
             alt="slika"
+            style={{
+              objectFit: "cover",
+            }}
             className="opacity-10"
-            objectFit="cover"
-            layout="fill"
+            fill
           />
         </div>
         <div className="relative flex flex-col md:items-start items-center z-10">
-          <hr className="border-[5px] w-64 border-red-700 clipped" />
-          <h1 className="text-white italic mt-2 text-4xl text-center md:text-6xl lg:text-7xl font-bold">
-            NAŠI PERSONALNI TRENERI
-          </h1>
+          <ScrollOpacity direction={"left"} delay={0.5}>
+            <hr className="border-[5px] w-64 border-red-700 clipped" />
+          </ScrollOpacity>
+          <ScrollRevealAnimation delay={0.4}>
+            <h1 className="text-white italic mt-2 text-4xl text-center md:text-6xl lg:text-7xl font-bold">
+              NAŠI PERSONALNI TRENERI
+            </h1>
+          </ScrollRevealAnimation>
         </div>
       </div>
       <Personalni />

@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
-import opengraph from './opengraph.png'
+import opengraph from './opengraph-image.png'
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "@/components/Footer";

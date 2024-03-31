@@ -20,9 +20,9 @@ const Treneri = () => {
             fill
           />
         </div>
-        <div className="relative flex flex-col md:items-start items-center z-10">
+        <div className="relative flex flex-col md:items-center items-center z-10">
           <ScrollOpacity direction={"left"} delay={0.5}>
-            <hr className="border-[5px] w-64 border-red-700 clipped" />
+            <hr className="border-[5px] md:mx-0 mx-auto w-64 border-red-700 clipped" />
           </ScrollOpacity>
           <ScrollRevealAnimation delay={0.4}>
             <h1 className="text-white italic mt-2 text-4xl text-center md:text-6xl lg:text-7xl font-bold">

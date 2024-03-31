@@ -2,17 +2,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDoubleLeft,
-  faClose,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleLeft, faClose } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import icon from "../assets/icons/navbar.svg";
 import logo from "../assets/images/logo.png";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 const MobileNav = () => {
-  const path = usePathname()
+  const path = usePathname();
   const [isOpen, setIsOpen] = useState(false); // Stanje za praćenje otvorenog/zatvorenog menija
   const [selectedLink, setSelectedLink] = useState(path);
   const toggleMenu = () => {
@@ -20,7 +17,7 @@ const MobileNav = () => {
   };
   const navbarItems = [
     {
-      naziv: "Home",
+      naziv: "Početna",
       link: "/",
     },
     {
@@ -46,19 +43,23 @@ const MobileNav = () => {
       style={{ zIndex: 150 }}
       className="bg-black md:hidden px-4 py-2 flex items-center justify-between fixed top-0 w-full"
     >
-      <Image src={logo} width={75} alt="logo" />
+      <Link href="/">
+        {" "}
+        <Image src={logo} width={75} alt="logo" />
+      </Link>
       <button className="bg-red-700 p-2 h-12 w-12 clip" onClick={toggleMenu}>
         {isOpen ? (
           <FontAwesomeIcon className="text-white" icon={faClose} size="2x" />
         ) : (
-          <Image src={icon} width={35} className="invert" alt="menu"/>
+          <Image src={icon} width={35} className="invert" alt="menu" />
         )}
       </button>
       <div
         onClick={(e) => {
           if (e.target === e.currentTarget) {
-            setIsOpen(false)
-          }}}
+            setIsOpen(false);
+          }
+        }}
         className={`w-screen left-0 h-screen absolute top-14 ${
           isOpen ? "bg-black/50 backdrop-blur-sm" : ""
         } transition-all duration-300`}

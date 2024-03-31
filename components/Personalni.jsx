@@ -89,26 +89,22 @@ const TrainerCard = ({
             </ScrollOpacity>
           ))}
         </div>
-        <div className="flex flex-col mt-4 text-white">
-          <ScrollRevealAnimation delay={0.5}>
+        <ScrollRevealAnimation delay={0.5}>
+          <div className="flex flex-col mt-4 text-white">
             <Link href={`https://www.instagram.com/${instagram}`}>
               <FontAwesomeIcon className="text-red-700" icon={faInstagram} />{" "}
               {instagram}
             </Link>
-          </ScrollRevealAnimation>
-          <ScrollRevealAnimation delay={0.7}>
             <Link href={`tel:${mobilni}`}>
               <FontAwesomeIcon className="text-red-700" icon={faPhone} />{" "}
               {mobilni}
             </Link>
-          </ScrollRevealAnimation>
-          <ScrollRevealAnimation delay={0.9}>
             <Link href={`mailto:${mail}`}>
               <FontAwesomeIcon className="text-red-700" icon={faEnvelope} />{" "}
               {mail}
             </Link>
-          </ScrollRevealAnimation>
-        </div>
+          </div>
+        </ScrollRevealAnimation>
         <ScrollOpacity direction={"left"} delay={0.3}>
           <div className="relative max-w-max mt-6">
             <Link

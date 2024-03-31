@@ -31,7 +31,7 @@ const Hero = () => {
           <Image
             src={logo}
             width={250}
-            className="mb-12 md:mx-0 mx-auto"
+            className="mb-6 md:mx-0 mx-auto"
             alt="logo"
           />
         </ScrollRevealAnimation>

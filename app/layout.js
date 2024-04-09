@@ -15,6 +15,9 @@ export const metadata = {
   description: "Reborn Gym je vaša destinacija za fitness i trening u srcu grada. Ponosimo se pružanjem vrhunskih usluga i programa treninga za sve nivoe fitnessa.",
   keywords: "fitness, trening, teretana, zdravlje, vežbanje, reborngym, trener",
   author: "Reborn Gym",
+  other: {
+    "google-site-verification": "KTnbzIrBzKmjLTGK-e6CajzzTwanDmBVbcHZLR4yE1M"
+  },
   openGraph: {
     title: "Reborn Gym | Better, Faster, Stronger",
     description: "Reborn Gym je vaša destinacija za fitness i trening u srcu grada. Ponosimo se pružanjem vrhunskih usluga i programa treninga za sve nivoe fitnessa.",

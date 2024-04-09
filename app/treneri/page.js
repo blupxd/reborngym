@@ -4,7 +4,9 @@ import Image from "next/image";
 import image from "../../assets/images/bg2.jpg";
 import ScrollOpacity from "@/components/ScrollOpacity";
 import ScrollRevealAnimation from "@/components/ScrollReveal";
-
+export const metadata = {
+  title: 'Reborn Gym | Treneri',
+}
 const Treneri = () => {
   return (
     <div className="bg-black flex flex-col">

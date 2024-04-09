@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 const sg = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Reborn Gym | Better, Faster, Stronger",
+  title: "Reborn Gym | Početna",
   description: "Reborn Gym je vaša destinacija za fitness i trening u srcu grada. Ponosimo se pružanjem vrhunskih usluga i programa treninga za sve nivoe fitnessa.",
   keywords: "fitness, trening, teretana, zdravlje, vežbanje, reborngym, trener",
   author: "Reborn Gym",
@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="rs">
       <body className={`${inter.className} ${sg.className}`}>
         
         <Nav />

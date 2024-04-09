@@ -3,7 +3,9 @@ import image from "../../assets/images/image.jpg";
 import Slike from "@/components/Slike";
 import ScrollOpacity from "@/components/ScrollOpacity";
 import ScrollRevealAnimation from "@/components/ScrollReveal";
-
+export const metadata = {
+  title: 'Reborn Gym | Galerija',
+}
 const Galerija = () => {
   return (
     <div className="flex flex-col">

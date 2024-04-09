@@ -32,7 +32,9 @@
     background-position: -155% 0%;
   }
 }
-
+body {
+  -moz-osx-font-smoothing: auto;
+}
 html {
   scroll-behavior: smooth;
 }

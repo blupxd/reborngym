@@ -56,9 +56,9 @@ const Hero = () => {
               </Link>
               <span className="absolute w-full inset-x-0 bottom-0 h-10 border border-red-700"></span>
             </div>
-            <h1 className="text-gray-600 font-thin italic text-sm mt-4">
+            <h2 className="text-gray-600 font-thin italic text-sm mt-4">
               Zašto ne bi promenio sebe?
-            </h1>
+            </h2>
           </div>
         </ScrollRevealAnimation>
       </div>
@@ -76,12 +76,12 @@ const Hero = () => {
               
               className="flex clipped items-center px-8 bg-red-700 font-bold text-xl"
             >
-              <h1 className="text-black font-semibold italic flex items-center w-64 gap-2">
+              <h3 className="text-black font-semibold italic flex items-center w-64 gap-2">
                 <span className="text-4xl text-white w-24">
                   <CountUp start={0} end={count} duration={5} />+
                 </span>{" "}
                 {label}
-              </h1>
+              </h3>
             </div>
           </ScrollRevealAnimation>
         ))}

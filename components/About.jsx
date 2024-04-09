@@ -67,16 +67,16 @@ const About = () => {
             {services.map((service, index) => (
               <ScrollOpacity key={index} direction={"left"} delay={index * 0.4}>
                 <div className="flex flex-col py-2">
-                  <h1 className="text-red-700 font-semibold text-lg md:text-xl">
+                  <h2 className="text-red-700 font-semibold text-lg md:text-xl">
                     <FontAwesomeIcon icon={faCircleCheck} /> {service.title}
-                  </h1>
-                  <h1 className="text-white/50 text-base italic">
+                  </h2>
+                  <h3 className="text-white/50 text-base italic">
                     <FontAwesomeIcon
                       className="text-red-700"
                       icon={faAngleDoubleRight}
                     />{" "}
                     {service.description}
-                  </h1>
+                  </h3>
                 </div>
               </ScrollOpacity>
             ))}

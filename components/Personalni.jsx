@@ -8,7 +8,6 @@ import {
   faPhone,
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
-import cile from "../assets/treneri/cile.jpg";
 import shape from "../assets/images/shape.png";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import trainers from "./treneri.json";

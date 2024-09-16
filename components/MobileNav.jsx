@@ -60,7 +60,7 @@ const MobileNav = () => {
             setIsOpen(false);
           }
         }}
-        className={`w-screen left-0 h-screen absolute top-14 ${
+        className={`w-screen left-0 h-screen absolute top-16 ${
           isOpen ? "bg-black/50 backdrop-blur-sm" : ""
         } transition-all duration-300`}
         style={{ pointerEvents: isOpen ? "auto" : "none" }}

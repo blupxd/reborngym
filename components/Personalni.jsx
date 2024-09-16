@@ -17,7 +17,7 @@ import ScrollRevealAnimation from "./ScrollReveal";
 
 const TrainerCard = ({
   name,
-  titula,
+  slika,
   services,
   instagram,
   mobilni,
@@ -36,12 +36,12 @@ const TrainerCard = ({
         <div className="relative w-[30rem]">
           <ScrollOpacity direction={"left"} delay={0.5}>
             <div
-              className={`h-[20rem] md:h-[32rem] mb-12 md:mb-24 clipped z-50 border-b-[15px] md:border-y-[15px] border-red-700 overflow-hidden relative ${
+              className={`h-[28rem] lg:h-[36rem] mb-12 md:mb-24 clipped z-50 border-b-[15px] md:border-y-[15px] border-red-700 overflow-hidden relative ${
                 isEvenIndex ? "mr-0 md:mr-24" : "md:mr-0 ml-0 md:ml-32"
               }`}
             >
               <Image
-                src={cile}
+                src={slika}
                 alt="slika"
                 fill
                 className="transition-all duration-500"
@@ -61,14 +61,8 @@ const TrainerCard = ({
 
       <div className="flex flex-col text-gray-600">
         <ScrollOpacity direction={"left"} delay={0.5}>
-          <h1 className="bg-red-700 max-w-max px-4 clipped py-2 text-gray-300 font-bold italic text-4xl mb-4">
+          <h1 className="bg-red-700 max-w-max px-12 text-white clipped py-2 font-bold italic text-4xl mb-4">
             {name}
-            <br />
-            {titula && (
-              <span className="text-sm font-bold text-amber-500">
-                <FontAwesomeIcon icon={faTrophy} /> {titula}
-              </span>
-            )}
           </h1>
         </ScrollOpacity>
         <ScrollOpacity direction={"left"} delay={0.6}>
@@ -81,7 +75,7 @@ const TrainerCard = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           {services.map((service, index) => (
             <ScrollOpacity direction={"left"} delay={index * 0.4} key={index}>
-              <div className="bg-red-700 border-b-[5px] border-red-950 text-white italic px-4 py-2 clipped">
+              <div className="bg-red-700 border-b-[5px] border-red-950 text-white italic px-12 md:px-6 py-2 clipped">
                 <h2 className="text-sm font-semibold">
                   <FontAwesomeIcon icon={faCheckDouble} /> {service}
                 </h2>
@@ -91,15 +85,15 @@ const TrainerCard = ({
         </div>
         <ScrollRevealAnimation delay={0.5}>
           <div className="flex flex-col mt-4 text-white">
-            <Link href={`https://www.instagram.com/${instagram}`}>
+            <Link className='max-w-max' href={`https://www.instagram.com/${instagram}`}>
               <FontAwesomeIcon className="text-red-700" icon={faInstagram} />{" "}
               {instagram}
             </Link>
-            <Link href={`tel:${mobilni}`}>
+            <Link className='max-w-max' href={`tel:${mobilni}`}>
               <FontAwesomeIcon className="text-red-700" icon={faPhone} />{" "}
               {mobilni}
             </Link>
-            <Link href={`mailto:${mail}`}>
+            <Link className='max-w-max' href={`mailto:${mail}`}>
               <FontAwesomeIcon className="text-red-700" icon={faEnvelope} />{" "}
               {mail}
             </Link>
@@ -129,7 +123,7 @@ const Personalni = () => {
           key={index}
           index={index} // Dodajte indeks ovde
           name={trainer.name}
-          titula={trainer.titula}
+          slika={trainer.slika}
           services={trainer.services}
           instagram={trainer.instagram}
           mobilni={trainer.mobilni}

@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { Space_Grotesk } from "next/font/google";
+import { Archivo } from "next/font/google";
 import opengraph from './opengraph-image.png'
 import "./globals.css";
 import Nav from "../components/Nav";
@@ -8,7 +8,7 @@ import MobileNav from "@/components/MobileNav";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
-const sg = Space_Grotesk({ subsets: ["latin"] });
+const sg = Archivo({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Reborn Gym | Početna",

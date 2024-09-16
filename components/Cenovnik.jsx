@@ -25,7 +25,7 @@ const Cenovnik = () => {
 
   return (
     <div id="cenovnik" className="bg-black flex flex-col p-6 md:p-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="flex flex-col">
           <ScrollOpacity direction={"left"}>
             <h1 className="text-red-700 text-2xl italic">CENOVNIK</h1>
@@ -55,7 +55,7 @@ const Cenovnik = () => {
             </div>
           </ScrollOpacity>
         </div>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 xl:grid-cols-2">
           {cenovnik.map(({ title, options }, index) => (
             <ScrollRevealAnimation delay={index * 0.5} key={title}>
               <div className="bg-gray-900/60 h-full border-b-[5px] clipped border-red-700 p-12 flex flex-col">

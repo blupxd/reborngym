@@ -1,7 +1,6 @@
 [
     {
       "name": "Aleksandar Milošević",
-      "titula": "Dvostruki šampion Srbije, vicešampion Balkan",
       "services": [
         "Online saradnja",
         "Plan ishrane",
@@ -9,6 +8,7 @@
         "Skidanje kilograma",
         "Theragun perkusivna terapija"
       ],
+      "slika": "/treneri/cile.jpg",
       "instagram": "cile92_bbf",
       "mobilni": "+381 65 5007 247",
       "mail": "cilebbf@yahoo.com"
@@ -22,6 +22,7 @@
           "Skidanje kilograma"
         ],
         "instagram": "stankovic.marija_vika",
+        "slika": "/treneri/maja.JPG",
         "mobilni": "+381 63 281 912",
         "mail": "marijastankovic@gmail.com"
       },
@@ -35,6 +36,7 @@
           "Treninzi 2 na 1"
         ],
         "instagram": "djeraaa_",
+        "slika": "/treneri/luka.jpeg",
         "mobilni": "+381 64 123 456",
         "mail": "lukadjeric9@yahoo.com"
       }

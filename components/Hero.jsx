@@ -37,12 +37,12 @@ const Hero = () => {
         </ScrollRevealAnimation>
         <ScrollRevealAnimation delay={0.4}>
           <div className="flex flex-col md:items-start items-center">
-            <h1 className="text-5xl lg:text-6xl text-center md:text-left text-white font-extrabold">
+            <h1 className="text-5xl lg:text-6xl italic text-center md:text-left text-white font-extrabold">
               JAČI. BRŽI. BOLJI. BEZ IZGOVORA.
             </h1>
             <hr className="ml-0 w-28 border-[5px] border-red-700" />
           </div>
-          <p className="text-base mt-6 font-thin md:text-left text-center text-gray-600">
+          <p className="text-lg mt-6 md:text-left text-center text-gray-600">
             <span className="text-red-700 italic">RebornGym</span> - gde se rađa
             snaga!
           </p>
@@ -56,7 +56,7 @@ const Hero = () => {
               </Link>
               <span className="absolute w-full inset-x-0 bottom-0 h-10 border border-red-700"></span>
             </div>
-            <h2 className="text-gray-600 font-thin italic text-sm mt-4">
+            <h2 className="text-gray-600 italic text-base mt-4">
               Zašto ne bi promenio sebe?
             </h2>
           </div>
@@ -67,8 +67,8 @@ const Hero = () => {
         <Image src={slika} alt="slika" fill className="object-cover " />
       </div>
 
-      <div className="z-10 bg-black grid col-span-2 grid-cols-1 lg:grid-cols-3 gap-16 px-6 mt-12 md:px-32 py-12">
-        <hr className="border col-span-1 lg:col-span-3 mt-6 border-red-700 mx-auto w-64" />
+      <div className="z-10 bg-black grid col-span-2 grid-cols-1 xl:grid-cols-3 gap-16 px-6 mt-12 md:px-32 py-12">
+        <hr className="border col-span-1 xl:col-span-3 mt-6 border-red-700 mx-auto w-64" />
 
         {heroInfo.map(({ count, label }, index) => (
           <ScrollRevealAnimation key={index} delay={index*0.35}>
@@ -76,7 +76,7 @@ const Hero = () => {
               
               className="flex clipped items-center px-8 bg-red-700 font-bold text-xl"
             >
-              <h3 className="text-black font-semibold italic flex items-center w-64 gap-2">
+              <h3 className="text-black p-2 font-semibold italic flex items-center max-w-max gap-2">
                 <span className="text-4xl text-white w-24">
                   <CountUp start={0} end={count} duration={5} />+
                 </span>{" "}
